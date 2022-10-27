@@ -20,7 +20,7 @@ jobs:
     - name: Connecting to your Ngrok account.
       run: .\ngrok\ngrok.exe authtoken $Env:2BlIe7gaVD0bb6Dvf2ryNnqd1FR_5phMHojpi9ZHjMN54s8sF
       env:
-        2BlIe7gaVD0bb6Dvf2ryNnqd1FR_5phMHojpi9ZHjMN54s8sF: ${{ secrets.2BlIe7gaVD0bb6Dvf2ryNnqd1FR_5phMHojpi9ZHjMN54s8sF }}
+        NGROK_AUTH_TOKEN: ${{ secrets.2BlIe7gaVD0bb6Dvf2ryNnqd1FR_5phMHojpi9ZHjMN54s8sF }}
     - name: Activating WIN 11 ShiroSTC-RDP access...
       run: | 
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
